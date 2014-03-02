@@ -1,0 +1,27 @@
+{
+  "author": "Ramesh Perumalsamy",
+  "contributors": [
+    {
+      "name": "Mark Kimsal"
+    }
+  ],
+  "name": "statsd-elasticsearch-backend",
+  "description": "A StatsD backend for Elasticsearch",
+  "version": "0.0.1",
+  "homepage": "https://github.com/markkimsal/statsd-elasticsearch-backend",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/markkkimsal/statsd-elasticsearch-backend.git"
+  },
+  "keywords": [
+    "elasticsearch",
+    "metrics",
+    "statsd"
+  ],
+  "engines": {
+    "node": ">=0.8"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "main": "lib/elasticsearch.js"
+}
