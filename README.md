@@ -5,7 +5,7 @@ Elasticsearch backend for statsd
 
 ## Overview
 
-This backend allows [Statsd][statsd] to save to [Elasticsearch][elasticsearch].  Supports dynamic index creation per day and follows the logstash naming convention of statsd-YYYY.MM.DD for index creation (TODO).
+This backend allows [Statsd][statsd] to save to [Elasticsearch][elasticsearch].  Supports dynamic index creation per day and follows the logstash naming convention of statsd-YYYY.MM.DD for index creation.
 
 ## History 
 
@@ -30,3 +30,5 @@ Merge the following configuration into your top-level existing configuration.
  , backends: ['statsd-elasticsearch-backend']
 }
 ```
+
+The field _elasticIndex_ is used as the prefix for your dynamic indices: for example "statsd-2014.02.04"
