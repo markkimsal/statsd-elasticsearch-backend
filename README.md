@@ -14,7 +14,7 @@ Originally written by Github user rameshpy, this library was created as a featur
 ## Installation
 
     $ cd /path/to/statsd
-    $ npm install statsd-elasticsearch-backend
+    $ npm install git://github.com/markkimsal/statsd-elasticsearch-backend.git
 
 ## Configuration
 
@@ -61,6 +61,6 @@ The above would be mapped into a JSON document like this:
 }
 ```
 
-Currently the values are hardcoded to: namespace, group, target, and action, as in the above example.  Having configurable naming conventions is the goal of a 1.0 release.
+Currently the keys are hardcoded to: namespace, group, target, and action, as in the above example.  Having configurable naming conventions is the goal of a 1.0 release.
 The idea for mapping came mostly from: [http://matt.aimonetti.net/posts/2013/06/26/practical-guide-to-graphite-monitoring/]
 
