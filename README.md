@@ -28,7 +28,7 @@ Add a structure to your configuration called "elasticsearch"
 	 host:          "localhost",
 	 indexPrefix:   "statsd",
 	 countType:     "counter",
-	 timerType:     "timer"
+	 timerType:     "timer",
 	 timerDataType: "timer_data"
  }
 ```
