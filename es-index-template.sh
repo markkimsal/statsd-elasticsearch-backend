@@ -122,6 +122,22 @@ curl -XPUT localhost:9200/_template/statsd-template -d '
                     "type": "float",
                     "index": "not_analyzed"
                 },
+                "bin_100": {
+                    "type": "integer",
+                    "index": "not_analyzed"
+                },
+                "bin_500": {
+                    "type": "integer",
+                    "index": "not_analyzed"
+                },
+                "bin_1000": {
+                    "type": "integer",
+                    "index": "not_analyzed"
+                },
+                "bin_inf": {
+                    "type": "integer",
+                    "index": "not_analyzed"
+                },
                 "ns": {
                     "type": "string",
                     "index": "not_analyzed"
