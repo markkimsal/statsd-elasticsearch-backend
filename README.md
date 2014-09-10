@@ -37,7 +37,7 @@ The field _indexPrefix_ is used as the prefix for your dynamic indices: for exam
 
 The type configuration options allow you to specify different elasticsearch _types for each statsd measurement.
 
-To configure Elasticsearch to automatically apply index template settings based on a naming pattern look at the es-index-template.sh file.  It will probably need customization (the timer_data type) for your particular statsd configuration (re: threshold pct).
+To configure Elasticsearch to automatically apply index template settings based on a naming pattern look at the es-index-template.sh file.  It will probably need customization (the timer_data type) for your particular statsd configuration (re: threshold pct and bins).
 
 ## Metric Name Mapping
 
