@@ -26,11 +26,26 @@ Add a structure to your configuration called "elasticsearch"
  elasticsearch: {
 	 port:          9200,
 	 host:          "localhost",
+	 path:          "/",
 	 indexPrefix:   "statsd",
 	 countType:     "counter",
 	 timerType:     "timer",
 	 timerDataType: "timer_data"
  }
+```
+
+The field _path_ is equal to "/" if you directly connect to ES. 
+But when ES is on behind the proxy (nginx,haproxy), for example http://domain.com/elastic-proxy/, then following settings required:
+```
+    port: 80,
+    host: "domain.com",
+    path: "/elastic-proxy/",
+```
+Nginx config proxy example:
+```
+    location /elastic-proxy/ {
+        proxy_pass http://localhost:9200/;
+    }
 ```
 
 The field _indexPrefix_ is used as the prefix for your dynamic indices: for example "statsd-2014.02.04"
