@@ -23,6 +23,7 @@ Add a structure to your configuration called "elasticsearch"
 
 ```js
 
+ backends: [ 'statsd-elasticsearch-backend', 'other-backends'],
  elasticsearch: {
 	 port:          9200,
 	 host:          "localhost",
