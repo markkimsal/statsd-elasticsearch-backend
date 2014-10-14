@@ -15,6 +15,14 @@ Originally written by Github user rameshpy, this library was created as a featur
 
     $ cd /path/to/statsd
     $ npm install git://github.com/markkimsal/statsd-elasticsearch-backend.git
+    
+To install from behind a proxy server:
+
+    $ export https_proxy=http://your.proxyserver.org:8080
+    $ export http_proxy=http://your.proxyserver.org:8080
+    $ cd /path/to/statsd
+    $ npm install git+https://github.com/markkimsal/statsd-elasticsearch-backend.git
+
 
 ## Configuration
 
