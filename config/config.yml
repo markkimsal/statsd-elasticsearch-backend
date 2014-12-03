@@ -1,0 +1,9 @@
+development: &dev
+  es:
+    env: <%= process.env.RACK_ENV || 'dev' %>
+
+test:
+  es:
+    env: <%= process.env.RACK_ENV || 'test' %>
+
+production: *dev

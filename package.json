@@ -21,7 +21,11 @@
   "engines": {
     "node": ">=0.8"
   },
-  "dependencies": {},
+  "dependencies": {
+    "js-yaml": "~2.1.0",
+    "optimist": "~0.6.0",
+    "underscore": "~1.5.1"
+  },
   "devDependencies": {},
   "main": "lib/elasticsearch.js"
 }
