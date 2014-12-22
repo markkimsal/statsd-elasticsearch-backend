@@ -71,6 +71,14 @@ sh  node_modules/statsd-elasticsearch-backend/es-index-template.sh
 ```
 Without this, your timestamps will not be interpreted as timestamps.
 
+## Test your installation
+
+Send a UDP packet that statsd understands with netcat.
+
+```
+echo "accounts.authentication.password.failed:1|c" | nc -u -w0 127.0.0.1 8125
+```
+
 ## Metric Name Mapping
 
 Each key sent to the elasticsearch backend will be broken up by dots (.) and each part of the key will be treated as a document property in elastic search.
