@@ -37,6 +37,7 @@ Add a structure to your configuration called "elasticsearch"
 	 host:          "localhost",
 	 path:          "/",
 	 indexPrefix:   "statsd",
+	 indexTimestamp: "year",
 	 countType:     "counter",
 	 timerType:     "timer",
 	 timerDataType: "timer_data"
@@ -58,6 +59,8 @@ Nginx config proxy example:
 ```
 
 The field _indexPrefix_ is used as the prefix for your dynamic indices: for example "statsd-2014.02.04"
+
+The field _indexTimestamp_ allows you to determine the timestamping for your dynamic index. "year", "month" and "day" would produce "statsd-2014", "statsd-2014.02", "statsd-2014.02.04" respectively.
 
 The type configuration options allow you to specify different elasticsearch _types for each statsd measurement.
 
