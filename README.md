@@ -32,6 +32,7 @@ Add a structure to your configuration called "elasticsearch"
 ```js
 
  backends: [ 'statsd-elasticsearch-backend', 'other-backends'],
+ debug: true,
  elasticsearch: {
 	 port:          9200,
 	 host:          "localhost",
