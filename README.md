@@ -38,7 +38,9 @@ Add a structure to your configuration called "elasticsearch"
 	 host:          "localhost",
 	 path:          "/",
 	 indexPrefix:   "statsd",
-	 indexTimestamp: "year",
+	 //indexTimestamp: "year",  //for index statsd-2015 
+	 //indexTimestamp: "month", //for index statsd-2015.01
+	 indexTimestamp: "day",     //for index statsd-2015.01.01
 	 countType:     "counter",
 	 timerType:     "timer",
 	 timerDataType: "timer_data"
