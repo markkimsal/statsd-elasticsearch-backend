@@ -64,7 +64,15 @@ The field _indexPrefix_ is used as the prefix for your dynamic indices: for exam
 
 The field _indexTimestamp_ allows you to determine the timestamping for your dynamic index. "year", "month" and "day" would produce "statsd-2014", "statsd-2014.02", "statsd-2014.02.04" respectively.
 
-The type configuration options allow you to specify different elasticsearch _types for each statsd measurement.
+The type configuration options allow you to specify different elasticsearch \_types for each statsd measurement.
+
+## Important upgrade from 0.2 to 0.3
+
+Previously, the config value for timerDataType was always ignored and timer data was alwasy saved as the timerType + '\_stats'.  If you are upgrading a live instance from 0.2 please be aware that the value of timerDataType will now be respected and you should ensure that you have the proper type mappings (especially for @timestamp) or that your timerDataType is set to timerType + '\_stats'.
+
+In addition to the above, the value of timerDataType was always overwriting timerData, so all timer information was being saved to the type "timer\_data" when the sample configuration would lead you to believe that it was being saved to the type "timer".
+
+In summary, the ES \_types of "timer_data" and "timer_data_stats" will now be "timer" and "timer_data" if the sample configuration is used.
 
 ## Template Mapping (basically required)
 
