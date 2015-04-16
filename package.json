@@ -21,7 +21,9 @@
   "engines": {
     "node": ">=0.8"
   },
-  "dependencies": {},
+  "dependencies": {
+    "named-regexp": "^0.1.1"
+  },
   "devDependencies": {},
   "main": "lib/elasticsearch.js"
 }
