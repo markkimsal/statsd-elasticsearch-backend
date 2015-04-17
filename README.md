@@ -43,7 +43,8 @@ Add a structure to your configuration called "elasticsearch"
 	 indexTimestamp: "day",     //for index statsd-2015.01.01
 	 countType:     "counter",
 	 timerType:     "timer",
-	 timerDataType: "timer_data"
+	 timerDataType: "timer_data",
+     formatter:     "default_format"
  }
 ```
 
@@ -118,3 +119,20 @@ The above would be mapped into a JSON document like this:
 Currently the keys are hardcoded to: namespace, group, target, and action, as in the above example.  Having configurable naming conventions is the goal of a 1.0 release.
 The idea for mapping came mostly from: [http://matt.aimonetti.net/posts/2013/06/26/practical-guide-to-graphite-monitoring/]
 
+## Configurable Metric Formatters
+
+As of 0.4.0 you can now choose to use from a selection of metric key formatters or write your own.
+
+The config value _formatter_ will resolve to the name of a file under lib/ with a .js extension added to it.
+
+````
+formatter:  my_own_format  # this will require ('lib/' + 'my_own_format' + '.js);
+```
+In this module you will need to export a number of functions.  The 3 that are supported right now are:
+```
+counters( key, value, ts, array )
+timers( key, value, ts, array )
+timer_data( key, value, ts, array )
+```
+
+Look at lib/default\_format.js for a template to build your own.
