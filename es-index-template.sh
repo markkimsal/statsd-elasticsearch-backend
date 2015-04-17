@@ -34,7 +34,7 @@ curl -XPUT localhost:9200/_template/statsd-template -d '
                 }
             }
         },
-        "timer_data" : {
+        "timer" : {
             "_source" : { "enabled" : true },
             "properties": {
                 "@timestamp": {
@@ -63,7 +63,7 @@ curl -XPUT localhost:9200/_template/statsd-template -d '
                 }
             }
         },
-        "timer_data_stats" : {
+        "timer_data" : {
             "_source" : { "enabled" : true },
             "properties": {
                 "@timestamp": {
