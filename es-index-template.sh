@@ -34,6 +34,35 @@ curl -XPUT localhost:9200/_template/statsd-template -d '
                 }
             }
         },
+        "gauge" : {
+            "_source" : { "enabled" : true },
+            "properties": {
+                "@timestamp": {
+                    "format": "dateOptionalTime",
+                    "type": "date"
+                },
+                "val": {
+                    "type": "long",
+                    "index": "not_analyzed"
+                },
+                "ns": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "grp": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "tgt": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "act": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                }
+            }
+        },
         "timer" : {
             "_source" : { "enabled" : true },
             "properties": {
