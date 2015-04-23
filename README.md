@@ -132,11 +132,12 @@ The config value _formatter_ will resolve to the name of a file under lib/ with 
 ````
 formatter:  my_own_format  # this will require ('lib/' + 'my_own_format' + '.js);
 ```
-In this module you will need to export a number of functions.  The 3 that are supported right now are:
+In this module you will need to export a number of functions.  The 4 that are supported right now are:
 ```
 counters( key, value, ts, array )
 timers( key, value, ts, array )
 timer_data( key, value, ts, array )
+gauges( key, value, ts, array )
 ```
 
 Look at lib/default\_format.js for a template to build your own.
