@@ -98,13 +98,13 @@ echo "accounts.authentication.login.num_users:333|g" | nc -u -w0 127.0.0.1 8125
 echo "accounts.authentication.login.num_users:-10|g" | nc -u -w0 127.0.0.1 8125
 ```
 
-## Metric Name Mapping
+## Default Metric Name Mapping
 
-Each key sent to the elasticsearch backend will be broken up by dots (.) and each part of the key will be treated as a document property in elastic search.
+Each key sent to the elasticsearch backend will be broken up by dots (.) and each part of the key will be treated as a document property in elastic search.  The first for keys will be treated as namespace, group, target, and action, with any remaining keys concatenated into the "action" key with dots.
 For example:
 
 ```js
-accounts.authentication.password.failed:1|c
+accounts.authentication.password.failure.count:1|c
 ```
 
 The above would be mapped into a JSON document like this:
@@ -114,7 +114,7 @@ The above would be mapped into a JSON document like this:
 	"ns":"accounts",
 	"grp":"authentication",
 	"tgt":"password",
-	"act":"failed",
+	"act":"failure.count",
 	"val":"1",
 	"@timestamp":"1393853783000"
 }
