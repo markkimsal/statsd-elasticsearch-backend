@@ -9,7 +9,6 @@ curl -XPUT localhost:9200/_template/statsd-template -d '
             "_source" : { "enabled" : true },
             "properties": {
                 "@timestamp": {
-                    "format": "dateOptionalTime",
                     "type": "date"
                 },
                 "val": {
@@ -38,7 +37,6 @@ curl -XPUT localhost:9200/_template/statsd-template -d '
             "_source" : { "enabled" : true },
             "properties": {
                 "@timestamp": {
-                    "format": "dateOptionalTime",
                     "type": "date"
                 },
                 "val": {
@@ -67,7 +65,6 @@ curl -XPUT localhost:9200/_template/statsd-template -d '
             "_source" : { "enabled" : true },
             "properties": {
                 "@timestamp": {
-                    "format": "dateOptionalTime",
                     "type": "date"
                 },
                 "val": {
@@ -96,7 +93,6 @@ curl -XPUT localhost:9200/_template/statsd-template -d '
             "_source" : { "enabled" : true },
             "properties": {
                 "@timestamp": {
-                    "format": "dateOptionalTime",
                     "type": "date"
                 },
                 "count_ps": {
