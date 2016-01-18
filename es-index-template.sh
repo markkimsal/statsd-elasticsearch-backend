@@ -1,4 +1,4 @@
-curl -XPUT localhost:9200/_template/statsd-template -d '
+curl -XPUT "${ES_HOST:-localhost:9200}/_template/statsd-template" -d '
 {
     "template" : "statsd-*",
     "settings" : {
