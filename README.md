@@ -84,6 +84,8 @@ To configure Elasticsearch to automatically apply index template settings based 
 From your etc/statsd installation type the following to get the basic template mapping
 ```
 sh  node_modules/statsd-elasticsearch-backend/es-index-template.sh
+# if your ES is on another machine or port
+ES_HOST=10.1.10.200 ES_PORT=9201 sh node_modules/statsd-elasticsearch-backend/es-index-template.sh
 ```
 Without this, your timestamps will not be interpreted as timestamps.
 
