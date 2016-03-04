@@ -12,7 +12,7 @@ curl -XPUT "${ES_HOST:-localhost}:${ES_PORT:-9200}/_template/statsd-template" -d
                     "type": "date"
                 },
                 "val": {
-                    "type": "long",
+                    "type": "double",
                     "index": "not_analyzed"
                 },
                 "ns": {
@@ -40,7 +40,7 @@ curl -XPUT "${ES_HOST:-localhost}:${ES_PORT:-9200}/_template/statsd-template" -d
                     "type": "date"
                 },
                 "val": {
-                    "type": "long",
+                    "type": "double",
                     "index": "not_analyzed"
                 },
                 "ns": {
@@ -68,7 +68,7 @@ curl -XPUT "${ES_HOST:-localhost}:${ES_PORT:-9200}/_template/statsd-template" -d
                     "type": "date"
                 },
                 "val": {
-                    "type": "long",
+                    "type": "double",
                     "index": "not_analyzed"
                 },
                 "ns": {
