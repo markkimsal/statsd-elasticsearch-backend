@@ -143,3 +143,18 @@ gauges( key, value, ts, array )
 ```
 
 Look at lib/default\_format.js for a template to build your own.
+
+## Basic Auth
+
+In order to use basic auth in your application, add two keys to configuration of application:
+
+```js
+ backends: [ 'statsd-elasticsearch-backend', 'other-backends'],
+ debug: true,
+ elasticsearch: {
+    ...
+    username: "username",
+    password: "password"
+    ...
+ }
+```
