@@ -1,4 +1,4 @@
-curl -XPUT "${ES_HOST:-localhost}:${ES_PORT:-9200}/_template/statsd-template" -d '
+curl -XPUT -H 'Content-Type: application/json' "${ES_HOST:-localhost}:${ES_PORT:-9200}/_template/statsd-template" -d '
 {
     "template" : "statsd-*",
     "settings" : {
